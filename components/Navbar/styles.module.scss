@@ -1,0 +1,147 @@
+$secondary_color: #183149;
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.navbar_mobile {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+
+  @media screen and (min-width: 640px) {
+    display: none;
+  }
+}
+
+.logo_navbar {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+
+  @media screen and (min-width: 425px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.navbar_mobile_branding {
+  display: flex;
+  align-items: center;
+}
+
+.navbar_mobile_branding_text {
+  font-size: 0.7rem;
+}
+
+.navbar_mobile_hamburger {
+  height: 25px;
+  width: 25px;
+  border-radius: 8px;
+  padding: 5px;
+  transition: background-color 0.3s;
+
+  &:active {
+    background-color: lightgray;
+    transition: background-color 0.3s;
+  }
+}
+
+.navbar_mobile_menu {
+  width: 100vw;
+  transition: all 0.5s;
+  padding: 5px 20px;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 0 8px 8px #666;
+  background-color: $secondary_color;
+
+  @media screen and (min-width: 640px) {
+    display: none;
+  }
+}
+
+.navbar_mobile_menu__hidden {
+  transform: translateX(100%);
+  transition: all 0.5s;
+  padding: 5px 20px;
+  box-sizing: border-box;
+  background-color: $secondary_color;
+
+  @media screen and (min-width: 425px) {
+    display: none;
+  }
+}
+
+.navlink_mobile {
+  text-align: end;
+  list-style-type: none;
+  margin: 10px 0;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #dfdfdf;
+  border-bottom: 1px solid white;
+  padding: 5px 0;
+  display: block;
+  mix-blend-mode: difference;
+}
+
+.navlink_mobile_active {
+  color: white;
+  font-weight: 600;
+}
+
+.navbar_desktop {
+  display: none;
+
+  @media screen and (min-width: 640px) {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+}
+
+.nav_desktop_container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.navlink {
+  font-size: 0.8rem;
+  margin: 0 10px;
+  color: #666;
+
+  &_container {
+    list-style-type: none;
+    display: inline-block;
+  }
+
+  @media screen and (min-width: 640px) {
+    font-size: 0.8rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 0.9rem;
+  }
+
+  &_active {
+    font-weight: 600;
+    color: $secondary_color;
+  }
+}

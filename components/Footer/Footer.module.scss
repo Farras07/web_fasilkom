@@ -1,0 +1,95 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px;
+  width: 100%;
+  background-color: #ef4f01;
+  box-sizing: border-box;
+}
+
+.top_wave {
+  margin: 0;
+  position: relative;
+  transform: translateY(10px);
+}
+
+.home_footer {
+  width: 100%;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto;
+
+  &__left_div {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    justify-content: center;
+
+    &_content {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__right_div {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+}
+
+.map_icon {
+  width: 50px;
+  height: 50px;
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+.temukan_kami {
+  font-weight: bold;
+  text-align: center;
+}
+
+.address {
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.copyright {
+  margin: 10px 0;
+  color: white;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 640px) {
+  .home_footer {
+    flex-direction: row;
+
+    &__left_div {
+      margin-right: 50px;
+      margin-bottom: 0;
+
+      &_content {
+        flex-direction: row;
+      }
+    }
+  }
+
+  .map_icon {
+    margin-right: 10px;
+  }
+
+  .temukan_kami,
+  .address {
+    text-align: left;
+  }
+}

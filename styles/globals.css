@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  .submenu {
+    @apply text-typedBlue relative after:content-[""] after:h-[3px] after:bg-tangerine after:absolute after:rounded-xl ;
+  }
+  .text-outline{
+    @apply bg-gradient-cust-orange1 bg-clip-text text-transparent ;
+  }
+  .shadow-outline{
+    @apply after:text-3xl after:tracking-wide after:font-bold after:text-white after:drop-shadow-cust-1 after:absolute after:left-0;
+  }
+  .checkbox-div:has(input:checked) {
+    @apply bg-slate-400;
+  }
+  .typed-cursor{
+    @apply text-tangerine
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+
+a {
+  text-decoration: none;
+}
+/* .card{
+  align-self: normal;
+}
+.nama{
+  margin-bottom: 5px;
+} */
+.react-tabs__tab {
+  display: inline-block;
+  /* border: 1px solid transparent; */
+  border: none;
+  bottom: -1px;
+  position: relative;
+  list-style: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  color: gray;
+  font-weight: bold;
+  letter-spacing: .04rem;
+} 
+ .react-tabs__tab-list{
+  border:none;
+} 
+.react-tabs__tab--selected{
+  border-color: transparent;
+  color: transparent;
+  background-clip: text;
+  background-color: transparent;
+  background-image: linear-gradient(97deg, #FA6D01 11.69%, #FAB401 118.46%);
+  border-bottom: 2px solid orange;
+}
+.card {
+  border-radius: 15px;
+  background: #FAFAFA;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+ }
+
+ .custom-dot-list-style button{
+  background-color: rgb(141, 141, 141);
+
+ }
+ .react-multi-carousel-dot{
+  border: none;
+ }
+ .react-multi-carousel-dot.react-multi-carousel-dot--active button{
+  background-color: #FA6D01;
+  
+ }
+ .react-multi-carousel-list {
+  padding: 0rem 0 2rem 0;
+  }
+.carousel-item-gap{
+  padding-left: 10px;
+}
+
+.react-tabs__tab:focus{
+  box-shadow: none;
+  border-color: none ;
+  border-bottom: 2px solid orange;
+}
+@media screen and (max-width: 768px) {
+  .react-tabs__tab-list{
+    display: flex;
+    gap: 12px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 20px 0;
+  }
+  .react-tabs__tab-list  .react-tabs__tab {
+    border-radius: 10px;
+    padding: .5rem 2rem;
+    background-color: #EFEFEF;
+    font-size: .8rem;
+    white-space: nowrap;
+  }
+  .react-tabs__tab--selected{
+    border-color: transparent;
+    color: transparent;
+    background-clip: text;
+    background-color: transparent;
+    background-image: linear-gradient(97deg, #FA6D01 11.69%, #FAB401 118.46%);
+    border-bottom: 2px solid orange;
+    border-radius: 0;
+  }
+  
+}
+
+
+
+ 

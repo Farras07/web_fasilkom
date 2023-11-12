@@ -1,0 +1,397 @@
+.page_container {
+  > div:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > p {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.google_upn_text {
+  text-decoration: underline;
+  font-weight: 800;
+}
+
+.link_status_aduan {
+  display: block;
+  background-color: #ef4f01;
+  width: fit-content;
+  padding: 10px 30px;
+  margin: 20px 0;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  transition: 0.2s all;
+
+  &:active {
+    transform: scale(0.95);
+    transition: 0.2s all;
+  }
+}
+
+/* toogle tata letak */
+.checkbtn {
+  width: 48px;
+  height: 48px;
+  font-size: 30px;
+  text-align: center;
+  color: #ef4f01;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.textarea {
+  width: 100%;
+  color: black;
+
+}
+
+/* BUTTON */
+.submit_button {
+  padding: 9px 25px;
+  background-color: #183149;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.28);
+  transition: all 0.3s ease 0s;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  align-self: flex-end;
+
+  &:not(:disabled):active {
+    transform: scale(0.97);
+    box-shadow: none;
+  }
+
+  &:disabled {
+    background-color: lightgrey;
+    color: #666;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+.spinner {
+  border-radius: 50%;
+  border: 10px solid black;
+}
+
+.pre_login_screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.login_text {
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 30px 0;
+  color: #133556;
+  line-height: 1.4rem;
+}
+
+.sign_in_with_google_btn {
+  padding: 10px 20px;
+  border: 2px solid rgba(79, 79, 79, 0.6);
+  border-radius: 8px;
+  background-color: white;
+  font-size: 0.7rem;
+  transition: transform 0.2s;
+
+  &:active {
+    transform: scale(0.98);
+    background-color: #133556;
+    color: white;
+    transition: transform 0.2s;
+  }
+}
+
+/* Responsive Mobile */
+@media (max-width: 480px) {
+  /* btn toogle */
+  .checkbtn {
+    font-size: 20px;
+  }
+}
+/* END NAVBAR */
+
+/* TITLE */
+.title {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.enter {
+  display: none;
+}
+
+/* Judul utama */
+.title_main {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ef4f01;
+  text-transform: uppercase;
+}
+
+/* sub judul */
+.title_sub {
+  font-size: 1.2rem;
+  color: #727171;
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 780px) {
+  .title_main {
+    font-size: 40px;
+    padding-top: -15px;
+  }
+
+  .title_sub {
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+
+/* responsive mobile */
+@media (max-width: 480px) {
+  .title {
+    padding-top: 25px;
+  }
+
+  .title_main {
+    font-size: 20px;
+  }
+
+  .title_sub {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .enter {
+    display: block;
+  }
+}
+/* END TITLE */
+
+/* FORM */
+.form_section {
+  background-color: #ef4f01;
+  min-height: 600px;
+  width: 100%;
+  max-width: 650px;
+  box-sizing: border-box;
+  color: #fff;
+  margin: 65px auto 30px;
+  padding: 10px 0;
+
+  @media screen and (min-width: 640px) {
+    border-radius: 12px;
+  }
+
+  @media screen and (min-width: 768px) {
+    box-shadow: 4px 6px 10px 1px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 30px auto;
+  height: fit-content;
+
+  > div {
+    width: 100%;
+  }
+}
+
+.input {
+  // background-color: #ccc;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* SIZE LABEL */
+.form_label {
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 37px;
+  text-align: center;
+  margin-left: 10px;
+  
+}
+
+/* SIZE BOX INPUT */
+.input,
+.select {
+  // height: 30px;
+  width: 100%;
+  border-radius: 4px;
+  border: none;
+  padding: 10px;
+  box-sizing: border-box;
+  color: black;
+}
+
+/* Jarak tiap div form */
+.nama,
+.email,
+.jurusan,
+.pesan {
+  margin-bottom: 20px;
+}
+
+/* CSS Tulisan di select */
+.select {
+  padding: 5px 8px;
+}
+
+/* radio-btn sejajar */
+.radio_btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px 0;
+}
+
+/* UKURAN BTN RADIO */
+.radio_input {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* placeholder */
+.input::placeholder,
+.textarea::placeholder {
+  font-size: 1rem;
+  color: rgba(79, 79, 79, 0.3);
+  padding-left: 2px;
+}
+
+/* Size textarea */
+.textarea {
+  height: 100px;
+  border-radius: 4px;
+  border: none;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* SIZE BUTTON KIRIM*/
+.submit_button {
+  background: #133556;
+  border: 1px solid #133556;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  padding: 5px 20px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  margin-top: 10px;
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 780px) {
+  .form {
+    margin-top: 40px;
+  }
+
+  .form_label {
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  // .input,
+  // .select {
+  //   height: 25px;
+  //   width: 460px;
+  // }
+
+  .select {
+    padding: 4px 7px;
+  }
+
+  .radio_input {
+    width: 30px;
+    height: 16px;
+  }
+
+  .input::placeholder,
+  .textarea::placeholder {
+    font-size: 0.8rem;
+  }
+
+  .submit_button {
+    padding: 9px 45px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+
+/* responsive mobile */
+@media only screen and (min-width: 300px) and (max-width: 480px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 30px auto;
+    height: fit-content;
+  }
+
+  .label {
+    font-size: 13px;
+  }
+
+  // .input,
+  // .select {
+  //   height: 25px;
+  //   width: 240px;
+  // }
+
+  .select {
+    padding: 3px 7px;
+  }
+
+  .radio_input {
+    width: 25px;
+    height: 13px;
+  }
+
+  .radio_label {
+    margin-left: 5px;
+  }
+
+  .input::placeholder,
+  .textarea::placeholder {
+    font-size: 0.7rem;
+  }
+
+  .submit_button {
+    padding: 9px 40px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+/* END FORM */
